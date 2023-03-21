@@ -40,15 +40,15 @@ function App() {
           <p className="text-[#b3aeae] text-base ">10 miles away</p>
         </div>
         <div className="flex flex-row absolute -bottom-[80px] left-[50%] translate-x-[-50%] gap-4 justify-center items-center">
+          {showUndo && (
+            <button onClick={() => handleCancelRequest()}>Undo</button>
+          )}
           <button className="w-[80px] h-[80px] border-2 flex justify-center items-center shadow-xl rounded-full bg-white">
             <img src={cross} onClick={() => handleSendRequest()} alt="delete" />
           </button>
           <button className="w-[80px] h-[80px] border-2 flex justify-center items-center  shadow-xl rounded-full bg-white">
             <img src={heart} onClick={() => handleSendRequest()} alt="heart" />
           </button>
-          {showUndo && (
-            <button onClick={() => handleCancelRequest()}>Undo</button>
-          )}
         </div>
       </div>
     </div>
